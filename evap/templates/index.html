@@ -29,7 +29,7 @@
         	</div>
         	<div class="span8">
         		<h2>{% trans "External student or lecturer" %}</h2>
-		        <div class="well">
+        		<div class="well">
 		        	<p>
 		        		{% blocktrans %}
 		        		If you are an external student or lecturer, you can use your external
@@ -37,28 +37,6 @@
 					    login key or if you have lost yours, you can create a new one below.
 		        		{% endblocktrans %}
 		        	</p>
-		        	<h4>{% trans "Step 2: Log in using the external login key" %}</h4>
-		            <p>
-		                {% blocktrans %}
-		                Please enter your login key below. Be aware that login keys are
-		                automatically invalidated after three months.
-		                {% endblocktrans %}
-		            </p>
-		            <form action="{% url evap.evaluation.views.index %}" method="GET">
-		                <fieldset>
-		                    <div class="clearfix">
-		                        <label for="userkey">{% trans "login key" %}</label>
-		                        <div class="input">
-		                            <input name="userkey">
-		                        </div>
-		                    </div>
-		                    <div class="actions">
-		                        <input class="btn success" type="submit" value="{% trans "Login" %}">
-		                    </div>
-		                </fieldset>
-		            </form> 
-		        </div>
-		        <div class="well">
 		            <h4>{% trans "Step 1: Generate a new external login key" %}</h4>
 		            <p>
 		                {% blocktrans %}
@@ -91,6 +69,28 @@
 		                </div>
 		                </fieldset>
 		            </form>
+		        </div>
+		        <div class="well">
+		        	<h4>{% trans "Step 2: Log in using the external login key" %}</h4>
+		            <p>
+		                {% blocktrans %}
+		                Please enter your login key below. Be aware that login keys are
+		                automatically invalidated after three months.
+		                {% endblocktrans %}
+		            </p>
+		            <form action="{% url evap.evaluation.views.index %}" method="GET">
+		                <fieldset>
+		                    <div class="clearfix">
+		                        <label for="userkey">{% trans "login key" %}</label>
+		                        <div class="input">
+		                            <input name="userkey">
+		                        </div>
+		                    </div>
+		                    <div class="actions">
+		                        <input class="btn success" type="submit" value="{% trans "Login" %}">
+		                    </div>
+		                </fieldset>
+		            </form> 
 		        </div>
         	</div>
         </div>
